@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import portrait from "./assets/joaquim-segundo.png";
+import logo from "/js-logo.png";
 import {
   about,
   contact,
@@ -71,9 +72,7 @@ function Header({ activeView, language, onLanguageChange, onNavigate }: HeaderPr
     <header className="site-header">
       <div className="brand-row">
         <button className="brand-button" type="button" onClick={() => onNavigate("home")}>
-          <span className="brand serif">
-            J<span>.</span>Segundo
-          </span>
+          <img className="brand-logo" src={logo} alt={shared.shortName} />
         </button>
         <div className="header-tools">
           <span className="masthead mono">{labels[language].masthead}</span>
